@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "noteboook",
+    "category": "stationary",
+    "price": "324",
+    "description": "ljsldkjf"
+  }
+]

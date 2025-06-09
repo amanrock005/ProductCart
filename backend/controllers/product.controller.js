@@ -1,43 +1,3 @@
-// import fs from "fs";
-// import path from "path";
-// import { fileURLToPath } from "url";
-
-// function readProductFile() {
-//   const __filename = fileURLToPath(import.meta.url);
-//   const __dirname = path.dirname(__filename);
-
-//   const filePath = path.join(__dirname, "../db/products.json");
-//   fs.readFile(filePath, "utf-8", (err, data) => {
-//     if (err) {
-//       console.error(`error occured while reading the file`);
-//       return;
-//     }
-//     try {
-//       const parsed = JSON.parse(data);
-//       return parsed;
-//     } catch (parseErr) {
-//       console.error("Error parsing JSON:", parseErr.message);
-//       return;
-//     }
-//   });
-// }
-
-// export const allproducts = async (req, res) => {
-//   readProductFile();
-//   console.log("this is all products");
-//   res.status(200).json({ success: true, message: "all products" });
-// };
-
-// export const addproduct = async (req, res) => {
-//   console.log("add product controller");
-//   res.status(200).json({ success: true, message: "add products" });
-// };
-
-// export const removeproduct = async (req, res) => {
-//   console.log("remove product controller");
-//   res.status(200).json({ success: true, message: "remove products" });
-// };
-
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -101,7 +61,7 @@ export const addproduct = async (req, res) => {
 
 // DELETE /products/removeproduct/:id
 export const removeproduct = async (req, res) => {
-  const { id } = req.body;
+  const { id } = req.params;
 
   if (!id) {
     return res.status(StatusCodes.BAD_REQUEST).json({

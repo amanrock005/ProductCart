@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function ProductItem({ product, onDelete }) {
   return (
     <li className="p-4 border rounded shadow flex justify-between items-center">

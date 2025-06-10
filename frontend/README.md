@@ -1,12 +1,62 @@
-# React + Vite
+# Frontend Setup And Logic
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- View all products
+- Add a new product
+- Delete a product
+- Responsive and styled with Tailwind CSS
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Structure
+```
+│
+├── components/
+│ ├── ProductForm.jsx
+│ └── ProductItem.jsx
+│
+├── pages/
+│ └── ProductManager.jsx
+│
+├── utils/
+│ └── axiosInstance.js
+│
+├── App.js
+└── index.js
+```
 
-## Expanding the ESLint configuration
+## Setup 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Step 1: Clone the repo
+```bash
+git clone https://github.com/amanrock005/ProductCart.git
+cd ProductCart/frontend
+```
+
+### Step 2: Install dependencies 
+```bash
+npm install
+```
+
+### Step 3: Start the development server
+```bash
+npm start
+```
+
+## API Base URL
+
+Make sure your backend is running on http://localhost:3000, and you've configured axiosInstance.js like this:
+
+```bash
+import axios from "axios";
+
+export const axiosInstance = axios.create({
+  baseURL: "http://localhost:3000/api",
+});
+```
+
+## Tech STack
+- React
+- Axios
+- Tailwind CSS
+- Vite
